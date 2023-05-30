@@ -15,7 +15,6 @@ function App() {
   const [setBadge, clearBadge] = useAppBadge()
 
   const handleClick = (card) => {
-    console.log("Sdasdf");
     if (!disabled) {
       pickOne ? setPickTwo(card) : setPickOne(card)
     }
@@ -72,7 +71,7 @@ function App() {
       setBadge()
       setCards(shuffle);
     }
-  }, [cards, wins])
+  }, [cards, wins, setBadge])
 
   return (
     <>
